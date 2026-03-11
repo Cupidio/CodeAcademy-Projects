@@ -8,3 +8,6 @@ My name is Cupid Sharpe. I am currently a Computer Science student at Embry Ridd
 Description:
 This is a repository full of my completed projects done through CodeAcademy. There are 
 multiple projects ranging from basic python for loops to KNN clustering cancer classifier programs. 
+
+Contact:
+If you have any questions concerning these programs or me, please contact me through my website: Cupidsharpe.com
