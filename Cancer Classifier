@@ -1,0 +1,36 @@
+import codecademylib3_seaborn
+from sklearn.datasets import load_breast_cancer
+
+b_c_data = load_breast_cancer()
+
+print(b_c_data.data[0])
+print(b_c_data.feature_names)
+
+print(b_c_data.target)
+print(b_c_data.target_names[0])
+
+from sklearn.model_selection import train_test_split
+
+t_d, v_d, t_l, v_l = train_test_split(b_c_data.data, b_c_data.target, test_size = 0.2, random_state = 100)
+
+print(len(t_d))
+print(len(t_l))
+
+from sklearn.neighbors import KNeighborsClassifier
+
+#n_neighnor = 3
+accuracies = []
+for k in range(1, 201):
+  n_neighnor = k
+  classifier = KNeighborsClassifier()
+  classifier.fit(t_d, t_l)
+  accuracies.append(classifier.score(v_d, v_l))
+
+import matplotlib.pyplot as plt
+
+k_list = range(1, 201)
+plt.plot(k_list, accuracies)
+plt.xlabel("k")
+plt.ylabel("Validation Accuracy")
+plt.title("Breast Cancer Classifier Arruracy")
+plt.show()
