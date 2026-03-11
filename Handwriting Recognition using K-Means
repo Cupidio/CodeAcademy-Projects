@@ -1,0 +1,35 @@
+import codecademylib3_seaborn
+import numpy as np
+from matplotlib import pyplot as plt
+
+from sklearn import datasets
+
+digits = datasets.load_digits()
+print(digits.DESCR)
+
+print(digits.data)
+
+print(digits.target)
+
+plt.gray()
+plt.matshow(digits.images[100])
+plt.show()
+
+print(digits.target[100])
+
+from sklearn.cluster import KMeans
+
+km = KMeans(n_clusters=10, random_state=42)
+
+km.fit(digits.data)
+
+pic = plt.figure(figsize=(8, 3))
+pic.suptitle("Clusters Image")
+
+for i in range(10):
+  axis = pic.add_subplot(2, 5, 1 + i)
+  axis.imshow(km.cluster_centers_[i].reshape((8, 8)), cmap=plt.cm.binary)
+
+plt.show()
+
+new_samples = np.array()
