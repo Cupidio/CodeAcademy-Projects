@@ -1,0 +1,45 @@
+weight = 3
+cost_ground_premium = 125.00
+print("The cost for premium ground shipping is $" +str(cost_ground_premium))
+
+#Ground Shopping
+if (weight <= 2):
+  cost_ground = weight*1.50+20
+  print("$" +str(cost_ground))
+
+elif (2 < weight <= 6):
+  cost_ground = weight*3.00+20
+  print("$" +str(cost_ground))
+
+elif (6 < weight <= 10):
+  cost_ground = weight*4.00+20
+  print("$" +str(cost_ground))
+
+elif (weight > 10):
+  cost_ground = weight*4.75+20
+  print("$" +str(cost_ground))
+
+else: 
+  print("Please add a weight measurement.")
+
+#Drone shipping
+drone_weight = 3
+
+if (drone_weight <= 2):
+  drone_cost = drone_weight*4.50
+  print("$" +str(drone_cost))
+
+elif (2 < drone_weight <= 6):
+  drone_cost = drone_weight*9.00
+  print("$" +str(drone_cost))
+
+elif (6 < drone_weight <= 10):
+  drone_cost = drone_weight*12.00
+  print("$" +str(drone_cost))
+
+elif (10 < drone_weight):
+  drone_cost = drone_weight*14.25
+  print("$" +str(drone_cost))
+
+else:
+  print("Please put a weight measurement.")
