@@ -1,0 +1,47 @@
+import random
+name = ""
+question = "Do you think he'll ask me to be his valentine..?"
+
+random_number = random.randint(1, 10)
+print(random_number)
+
+if (random_number == 1): 
+  answer = "Yes - def"
+
+elif (random_number == 2):
+  answer = "It is decidely so"
+
+elif (random_number == 3):
+  answer = "Computing computing.. idc tbh"
+
+elif (random_number == 4):
+  answer = "Dont ask again"
+
+elif (random_number == 5):
+  answer = "Really..?"
+  
+elif (random_number == 6):
+  answer = "Better not tell you now"
+
+elif (random_number == 7):
+  answer = "oh.. uh no"
+
+elif (random_number == 8):
+  answer = "lol i dont think so"
+
+elif (random_number == 9):
+  answer = "Very doubtful"
+
+elif (random_number == 10):
+  answer = "Is that really a question..?"
+
+else:
+  answer = "Error"
+
+if (name == ""):
+  print("Question: " + question)
+  print("Magic 8-Ball's answer: " + answer)
+
+else:
+  print(name + " asks: " + question)
+  print("Magic 8-Ball's answer: " + answer)
