@@ -1,0 +1,22 @@
+print("Welcome to Cupid's first chatbot!")
+print("This chatbot will simply repeat what the user says.")
+
+stuff_to_echo = input("Please enter something for the chatbot to repeat: ")
+
+print("You said: " + stuff_to_echo)
+
+name_of_user = input("What is your name?")
+
+print("Greetings" + name_of_user + ", how may I be of service today?")
+
+user_response = input("What do you need help with?")
+
+print("You need help with" + user_response + ", correct")
+
+User_second_response = input("Is the following information true? (Yes/No)")
+
+#if (user_second_response = "Yes"): 
+  #print("Let's begin right away!")
+
+#if (user_second_response = "No"):
+  #print("Please reintiate program and try again")
